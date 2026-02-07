@@ -1,0 +1,110 @@
+@font-face {
+    font-family: "Monocraft";
+    src: url(../Monocraft.ttf) format("truetype");
+    font-style: normal;
+}
+
+body {
+    background-color: #232634;
+    zoom: 90%; /* https://developer.mozilla.org/en-US/docs/Web/CSS/zoom 
+    https://caniuse.com/css-zoom */
+}
+
+iframe{
+    background-color: #232634;
+}
+
+h1{
+    color: #85c1dc;
+    font-family: 'monocraft';
+}
+
+h2{
+    color: #85c1dc;
+    font-family: 'monocraft';
+}
+
+p
+{
+    color: #85c1dc;
+    font-family: 'monocraft';
+}
+
+b
+{
+    font-weight: bold;
+}
+
+/* Links */
+a:link {
+    color: #99d1db;
+    text-decoration: none;
+  }
+a:visited {
+    color: #81c8be;
+    text-decoration: none;
+}
+a:hover {
+    color: #a6d189;
+    text-decoration: underline;
+}
+
+#themeSwitcher {
+    position: fixed;
+    top: 12px;
+    left: 12px;
+    background: rgba(30, 30, 30, 0.92);
+    padding: 10px 18px 10px 14px;
+    min-width: 120px;
+    max-width: 220px;
+    color: white;
+}
+#themeSwitcher h2 {
+    margin: 0 0 6px 0;
+}
+#themeSwitcher p {
+    margin: 0;
+}
+
+#siteButtons {
+    position: fixed;
+    right: 20px;
+    padding: 10px 18px 10px 14px;
+    color: white;
+}
+
+.box{
+    margin: auto;
+    border: 5px solid gray;
+    border-radius: 5px;
+    border-style: dashed;
+    width: 700px;
+}
+
+/* New layout styles */
+.center-row {
+    display: flex;
+    align-items: center; /* vertically center title next to image */
+    justify-content: center; /* horizontally center the whole block in the page */
+    gap: 24px;
+    margin-top: 80px; /* give some space from top */
+}
+
+.center-row .cover {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 9px;
+    border: 3px solid #c5bdbc;
+}
+
+.center-row .meta {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.center-row .meta h1, .center-row .meta h2 {
+    margin: 0;
+    text-align: left;
+}

@@ -30,8 +30,10 @@ $(document).ready(function() {
     }
 
     function fetchImage(artist, song) {
-        if(song = "No music currently playing")
+        if(song == "No music currently playing"){
             $('.cover').attr('src', './placeholder.png'); // Fallback image
+            return;
+        }
 
         $.ajax({
             url: `https://kernelkitty.it:2053/getImage?artist=${encodeURIComponent(artist)}&song=${encodeURIComponent(song)}`, 

@@ -9,6 +9,9 @@
         <meta property="og:image" content="https://kernelkitty.it/face.png">
 
         <link id="theme-default" href="./style.css" rel="stylesheet">
+        <link id="theme-one" href="./themes/black.css" rel="stylesheet" disabled>
+        <link id="theme-two" href="./themes/acqua.css" rel="stylesheet" disabled>
+
 
         <title>Cat is lisening to</title>
 
@@ -22,6 +25,26 @@
                 <h2><span id="nowPlayingArtist">Artist</span></h2>
             </div>
         </div>
+
+        <div id="themeSwitcher">
+        <h2>Change the theme</h2>
+        <p>
+            <a href="#" onclick="enableStylesheet('default'); return false;">Default</a>,
+            <a href="#" onclick="enableStylesheet('one'); return false;">Black</a>,
+            <a href="#" onclick="enableStylesheet('two'); return false;">Acqua</a>,
+        </p>
+        </div>
+        <script>
+        function enableStylesheet(theme) {
+            var themes = ["default", "one", "two"];
+            themes.forEach(function(t) {
+            var link = document.getElementById("theme-" + t);
+            if (link) {
+                link.disabled = (t !== theme);
+            }
+            });
+        }
+        </script>
     </body>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
